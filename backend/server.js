@@ -7,8 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/submit", (req, res) => {
-    const { name, email } = req.body;
-    console.log("Received:", name, email);
+    const { name, email, message } = req.body;
+
+    console.log("Received:");
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
     res.send("Message received successfully!");
 });
 
