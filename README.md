@@ -7,24 +7,38 @@ This is a simple **student portfolio website** built using:
 - Node.js (Express) backend  
 
 The website includes:  
-- A home section  
-- About section  
-- Skills section  
-- Projects section  
-- Contact form connected to a backend  
+- 🏠 Home section  
+- 👤 About section  
+- 🛠️ Skills section  
+- 💼 Projects section  
+- 📩 Contact form connected to a backend  
 
 ---
 
 ## 🚀 How it works  
 
-When someone fills the contact form with their **name and email**, the data is sent to a Node.js backend running on:  
+The contact form collects:  
+- Name  
+- Email  
+- Message  
+
+When a user submits the form, this data is sent to a **Node.js (Express) backend** running at:
 
 
-The backend prints the data in the terminal and sends back a message:  
+
+
+The backend receives the data, prints it in the terminal, and sends back this response to the user:
 
 > "Message received successfully!"
 
----
+Example of what appears in your terminal:
+
+Received:
+Name: example
+Email: examplen@example.com
+
+Message: Your portfolio looks great!
+
 
 ## 🛠️ How to run the project  
 
