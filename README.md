@@ -6,54 +6,73 @@ This is a simple **student portfolio website** built using:
 - JavaScript  
 - Node.js (Express) backend  
 
-The website includes:  
+The project is deployed as a **full-stack application** with:  
+- 🌍 Frontend hosted on **GitHub Pages**  
+- ☁️ Backend hosted on **Render**
+
+---
+
+## ✨ Features  
+
 - 🏠 Home section  
 - 👤 About section  
 - 🛠️ Skills section  
 - 💼 Projects section  
-- 📩 Contact form connected to a backend  
+- 📩 Contact form connected to a live backend  
 
 ---
 
-## 🚀 How it works  
+## 🚀 Live Demo  
 
-The contact form collects:  
+### 🔹 Frontend (GitHub Pages)
+https://ashin-krishgithub.io/main-project/
+
+
+### 🔹 Backend (Render)
+https://main-project-u0vl.onrender.com/
+
+
+---
+
+## 🔄 How the Contact Form Works  
+
+The contact form collects:
 - Name  
 - Email  
 - Message  
 
-When a user submits the form, this data is sent to a **Node.js (Express) backend** running at:
+When a user submits the form:
+1. The data is sent from the frontend to the backend using a `POST` request.
+2. The backend endpoint used is:
+
+3. The backend receives the data, logs it in the Render server logs, and responds with: Message received successfully!
 
 
-
-
-The backend receives the data, prints it in the terminal, and sends back this response to the user:
-
-> "Message received successfully!"
-
-Example of what appears in your terminal:
+### 📋 Example (Render Logs)
 
 Received:
-Name: example
-Email: examplen@example.com
+Name: Example User
+Email: example@email.com
 
-Message: Your portfolio looks great!
+---
 
+## 🛠️ Tech Stack  
 
-## 🛠️ How to run the project  
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+- GitHub Pages (hosting)
 
-### **1. Run the frontend**
-Just open `index.html` in your browser.
+### Backend
+- Node.js  
+- Express.js  
+- CORS  
+- Render (cloud hosting)
 
-### **2. Run the backend**
-In your project folder, open a terminal and run:
+------
 
-```bash
-node server.js
+👨‍💻 Created By
 
-#you should seee
-Server running on http://localhost:5000
-
-
-👨‍💻 Created by
 Ashin Krishna
+25bcya16
