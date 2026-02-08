@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +10,14 @@ html {
     scroll-behavior: smooth;
 }
 
-/* =========================
-   BODY
-========================= */
+
 body {
     background: radial-gradient(circle at top, #0f0f0f, #000000);
     color: #ffffff;
     min-height: 100vh;
 }
 
-/* =========================
-   COOL TECH HEADER
-========================= */
+
 .header {
     position: sticky;
     top: 0;
@@ -43,9 +37,7 @@ body {
     align-items: center;
 }
 
-/* =========================
-   LOGO (AK.codes)
-========================= */
+
 .logo {
     font-size: 26px;
     font-weight: 700;
@@ -56,22 +48,20 @@ body {
     gap: 6px;
 }
 
-/* </> icon */
+
 .logo .code {
     color: crimson;
     text-shadow: 0 0 12px crimson;
     animation: glowPulse 2s infinite alternate;
 }
 
-/* .codes */
+
 .logo .dot {
     color: crimson;
     font-weight: 600;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+
 .nav {
     display: flex;
     gap: 24px;
@@ -86,7 +76,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* Underline animation */
+
 .nav a::after {
     content: "";
     position: absolute;
@@ -106,7 +96,7 @@ body {
     width: 100%;
 }
 
-/* Contact button */
+
 .nav-btn {
     padding: 8px 16px;
     border: 1px solid crimson;
@@ -121,9 +111,7 @@ body {
     box-shadow: 0 0 20px crimson;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+
 .hero {
     height: 45vh;
     display: flex;
@@ -136,9 +124,7 @@ body {
     max-width: 600px;
 }
 
-/* =========================
-   GLASS EFFECT
-========================= */
+
 .glass {
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(14px);
@@ -149,9 +135,7 @@ body {
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
 }
 
-/* =========================
-   HERO TEXT + ANIMATION
-========================= */
+
 .hero-box h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -161,7 +145,7 @@ body {
     color: crimson;
 }
 
-/* Typing animation */
+
 .typing-text {
     overflow: hidden;
     white-space: nowrap;
@@ -170,7 +154,6 @@ body {
     animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
 }
 
-/* Fade-in subtitle */
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s forwards;
@@ -178,13 +161,7 @@ body {
     color: #cccccc;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
+
 
 .section h2 {
     color: crimson;
@@ -195,13 +172,10 @@ body {
 .section {
     padding: 60px 20px;
     text-align: center;
-    scroll-margin-top: 90px; /* fixes sticky header overlap */
+    scroll-margin-top: 90px; 
+
 }
 
-
-/* =========================
-   SKILLS
-========================= */
 .skill-chips {
     display: flex;
     justify-content: center;
@@ -222,12 +196,8 @@ body {
     box-shadow: 0 0 20px crimson;
 }
 
-/* =========================
-   PROJECTS
-========================= */
-/* =========================
-   FLIP CARD PROJECTS
-========================= */
+
+
 .flip-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -236,12 +206,11 @@ body {
     margin: 40px auto 0;
 }
 
-/* Card container */
+
 .flip-card {
     perspective: 1000px;
 }
 
-/* Inner card */
 .flip-inner {
     width: 100%;
     height: 180px;
@@ -250,12 +219,12 @@ body {
     transition: transform 0.6s ease;
 }
 
-/* Flip on hover */
+
 .flip-card:hover .flip-inner {
     transform: rotateY(180deg);
 }
 
-/* Front & Back */
+
 .flip-front,
 .flip-back {
     position: absolute;
@@ -274,13 +243,13 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* Front */
+
 .flip-front h3 {
     color: #ffffff;
     font-size: 20px;
 }
 
-/* Back */
+
 .flip-back {
     transform: rotateY(180deg);
     background: linear-gradient(135deg, crimson, darkred);
@@ -297,22 +266,20 @@ body {
     opacity: 0.9;
 }
 
-/* Glow effect */
+
 .flip-card:hover .flip-front,
 .flip-card:hover .flip-back {
     box-shadow: 0 0 25px crimson;
 }
 
-/* Mobile fix */
+
 @media (max-width: 600px) {
     .flip-inner {
         height: 160px;
     }
 }
 
-/* =========================
-   CONTACT FORM
-========================= */
+
 form {
     max-width: 420px;
     margin: auto;
@@ -358,9 +325,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -368,9 +333,7 @@ footer {
     border-top: 1px solid rgba(255, 0, 0, 0.2);
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -393,9 +356,7 @@ footer {
     }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
 @media (max-width: 700px) {
     .hero-box h1 {
         font-size: 26px;

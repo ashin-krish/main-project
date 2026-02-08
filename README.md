@@ -25,11 +25,12 @@ The project is deployed as a **full-stack application** with:
 ## 🚀 Live Demo  
 
 ### 🔹 Frontend (GitHub Pages)
-https://ashin-krishgithub.io/main-project/
+https://ashin-krishna.github.io/main-project/
+
 
 
 ### 🔹 Backend (Render)
-https://main-project-u0vl.onrender.com/
+POST https://main-project-u0vl.onrender.com/submit
 
 
 ---
