@@ -1,206 +1,411 @@
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* =========================
+   BODY
+========================= */
 body {
-    background: #0f172a;
-    color: #e5e7eb;
+    background: radial-gradient(circle at top, #0f0f0f, #000000);
+    color: #ffffff;
+    min-height: 100vh;
 }
 
-
-nav {
+/* =========================
+   COOL TECH HEADER
+========================= */
+.header {
     position: sticky;
     top: 0;
-    background: #020617;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 16px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    z-index: 100;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-nav a {
-    color: #e5e7eb;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
+/* =========================
+   LOGO (AK.codes)
+========================= */
 .logo {
-    color: #38bdf8;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
+/* </> icon */
+.logo .code {
+    color: crimson;
+    text-shadow: 0 0 12px crimson;
+    animation: glowPulse 2s infinite alternate;
+}
 
-.hero {
-    height: 90vh;
+/* .codes */
+.logo .dot {
+    color: crimson;
+    font-weight: 600;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
     display: flex;
-    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: #dddddd;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+/* Underline animation */
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: crimson;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Contact button */
+.nav-btn {
+    padding: 8px 16px;
+    border: 1px solid crimson;
+    border-radius: 20px;
+    color: crimson !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.nav-btn:hover {
+    background: crimson;
+    color: #ffffff !important;
+    box-shadow: 0 0 20px crimson;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 45vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.hero span {
-    color: #38bdf8;
+.hero-box {
+    max-width: 600px;
 }
 
-.btn {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: #38bdf8;
-    color: #020617;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+/* =========================
+   GLASS EFFECT
+========================= */
+.glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
 }
 
-.btn:hover {
-    opacity: 0.8;
+/* =========================
+   HERO TEXT + ANIMATION
+========================= */
+.hero-box h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
+.hero-box span {
+    color: crimson;
+}
 
+/* Typing animation */
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid crimson;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+/* Fade-in subtitle */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 3s;
+    color: #cccccc;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 .section {
-    padding: 60px 40px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .section h2 {
-    color: #38bdf8;
+    color: crimson;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.skill {
-    background: #020617;
-    padding: 15px;
+.section {
+    padding: 60px 20px;
     text-align: center;
-    border-radius: 10px;
+    scroll-margin-top: 90px; /* fixes sticky header overlap */
 }
 
-.project-grid {
+
+/* =========================
+   SKILLS
+========================= */
+.skill-chips {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.chip {
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid crimson;
+    box-shadow: 0 0 12px rgba(255,0,0,0.5);
+    transition: 0.3s;
+}
+
+.chip:hover {
+    background: crimson;
+    box-shadow: 0 0 20px crimson;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+/* =========================
+   FLIP CARD PROJECTS
+========================= */
+.flip-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 40px auto 0;
 }
 
-.project-card {
-    background: #020617;
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.3s;
+/* Card container */
+.flip-card {
+    perspective: 1000px;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
+/* Inner card */
+.flip-inner {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
 }
 
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 50px;
+/* Flip on hover */
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
 }
 
-
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-#contact form {
-    max-width: 500px;
-    margin: 0 auto;
+/* Front & Back */
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
 }
 
-#contact input[type="text"],
-#contact input[type="email"] {
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #38bdf8;
+/* Front */
+.flip-front h3 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Back */
+.flip-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, crimson, darkred);
+    color: #ffffff;
+}
+
+.flip-back p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.flip-back span {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Glow effect */
+.flip-card:hover .flip-front,
+.flip-card:hover .flip-back {
+    box-shadow: 0 0 25px crimson;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+    .flip-inner {
+        height: 160px;
+    }
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+    max-width: 420px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid crimson;
     border-radius: 8px;
-    background: #020617;
-    color: #e5e7eb;
-    font-size: 1em;
+    color: #ffffff;
     outline: none;
-    transition: 0.3s;
 }
 
-#contact input[type="text"]:focus,
-#contact input[type="email"]:focus {
-    border-color: #0ea5e9;
-    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+input::placeholder,
+textarea::placeholder {
+    color: #999999;
 }
 
-#contact button {
-    padding: 12px 20px;
-    background: #38bdf8;
-    color: #020617;
-    font-weight: bold;
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: crimson;
     border: none;
-    border-radius: 25px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-#contact button:hover {
-    opacity: 0.85;
-    transform: translateY(-2px);
+button:hover {
+    background: darkred;
+    box-shadow: 0 0 15px crimson;
 }
 
 #msg {
     margin-top: 15px;
-    text-align: center;
     font-weight: bold;
-    color: #22c55e; 
-    font-size: 1em;
 }
 
-#contact textarea {
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    background: #020617;
-    color: #e5e7eb;
-    font-size: 1em;
-    outline: none;
-    resize: vertical;
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
 }
 
-#contact textarea:focus {
-    border-color: #0ea5e9;
-    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 6px crimson;
+    }
+    to {
+        text-shadow: 0 0 18px crimson;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+    .hero-box h1 {
+        font-size: 26px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
 }

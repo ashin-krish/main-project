@@ -70,9 +70,10 @@ Email: example@email.com
 - CORS  
 - Render (cloud hosting)
 
-------
+----
 
 👨‍💻 Created By
 
 Ashin Krishna
 25bcya16
+

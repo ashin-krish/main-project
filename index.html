@@ -8,78 +8,123 @@
 </head>
 <body>
 
-<nav>
-    <h2 class="logo">portfolio build</h2>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<header class="header">
+    <div class="header-inner">
+<h1 class="logo">
+    <span class="code">&lt;/&gt;</span> AK<span class="dot">.dev</span>
+</h1>
 
-<section id="home" class="hero">
-    <h1>Hi, I'm <span>Ashin Krishna</span></h1>
-    <p>Web Developer | Automation Testing Learner</p>
-    <a href="#projects" class="btn">View My Work</a>
+
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="glass hero-box">
+        <h1 class="typing-text">Hey, I'm <span>Ashin Krishna</span></h1>
+        <p class="fade-in">Web Developer • Automation Testing Learner</p>
+    </div>
 </section>
 
-<section id="about" class="section">
+<!-- ABOUT -->
+<section class="section glass" id="about">
     <h2>About Me</h2>
     <p>
-       I am a first-year student enthusiastic about web development and automation testing, currently learning how modern web applications work and how testing tools can make software more reliable and efficient.
+        I am a first-year student passionate about web development and automation testing.
+        I enjoy building modern web apps and improving software reliability using testing tools.
     </p>
 </section>
 
-<section id="skills" class="section">
+<!-- SKILLS -->
+<section class="section" id="skills">
     <h2>Skills</h2>
-    <div class="skill-grid">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Python</div>
-        <div class="skill">C</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Automation Testing</div>
-    </div>
+    <div class="skill-chips">
+    <span class="chip">HTML</span>
+    <span class="chip">CSS</span>
+    <span class="chip">JavaScript</span>
+    <span class="chip">Python</span>
+</div>
+
 </section>
 
-<section id="projects" class="section">
+<!-- PROJECTS -->
+<section class="section glass" id="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Modern responsive portfolio using HTML, CSS & JS.</p>
+
+    <div class="flip-grid">
+
+        <!-- Project 1 -->
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>Portfolio Website</h3>
+                </div>
+                <div class="flip-back">
+                    <p>
+                        A modern personal portfolio showcasing my skills,
+                        projects, and contact information with a responsive layout.
+                    </p>
+                    <span>HTML • CSS • JavaScript</span>
+                </div>
+            </div>
         </div>
 
-        <div class="project-card">
-            <h3>tic tac toe game</h3>
-            <p>made simple tic tac game using html css and JavaScript</p>
+        <!-- Project 2 -->
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>Tic Tac Toe Game</h3>
+                </div>
+                <div class="flip-back">
+                    <p>
+                        A classic tic tac toe game with interactive UI,
+                        turn-based logic, and win condition detection.
+                    </p>
+                    <span>JavaScript • HTML • CSS</span>
+                </div>
+            </div>
         </div>
 
-        <div class="project-card">
-            <h3>Automation Scripts</h3>
-            <p>Basic test automation using Python.</p>
+        <!-- Project 3 -->
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>Automation Testing Scripts</h3>
+                </div>
+                <div class="flip-back">
+                    <p>
+                        Basic automation scripts written in Python to validate
+                        functionality, reduce manual testing, and improve reliability.
+                    </p>
+                    <span>Python • Automation Testing</span>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
 
-<section id="contact" class="section">
+
+<!-- CONTACT -->
+<section class="section" id="contact">
     <h2>Contact Me</h2>
 
-    <form id="contactForm">
+    <form id="contactForm" class="glass">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
-
-        
-        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 
     <p id="msg"></p>
 </section>
-<!-- trigger rebuild -->
+
 <footer>
     <p>© 2025 Ashin Krishna</p>
 </footer>
